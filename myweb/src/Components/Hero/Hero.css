@@ -1,0 +1,267 @@
+.Hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #ffffff;
+  padding: 3rem;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(249, 115, 22, 0.3) 0%,
+    rgba(249, 115, 22, 0.1) 20%,
+    transparent 50%,
+    #181818 100%
+  );
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.profilePic {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ff6200;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 98, 0, 0.3);
+  margin-right: 4rem;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.profilePic:hover {
+  transform: rotate(5deg) scale(1.08);
+  box-shadow: 0 16px 32px rgba(255, 98, 0, 0.6);
+}
+
+.intro {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  animation: slideInRight 1s ease-out;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.text-blue-500 {
+  color: #ff6200;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: lowercase;
+  position: relative;
+  display: inline-block;
+}
+
+.text-blue-500::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ff6200, #ff8c00);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.text-blue-500:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.aboutMe-p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin: 0 0 2rem 0;
+  animation: slideInRight 1.1s ease-out 0.2s;
+  animation-fill-mode: backwards;
+  letter-spacing: 0.5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.social-button {
+  background: linear-gradient(90deg, #ff6200, #ff8c00);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease;
+  animation: slideInRight 1.2s ease-out 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.social-button:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 98, 0, 0.5);
+  background: linear-gradient(90deg, #ff8c00, #ff6200);
+}
+
+.social-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes icons white for contrast */
+  transition: filter 0.3s ease;
+}
+
+.social-button:hover .social-icon {
+  filter: brightness(1) invert(0); /* Restores original icon color on hover */
+}
+
+.cv-button {
+  background: linear-gradient(90deg, #ff6200, #ff8c00);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease;
+  animation: slideInRight 1.2s ease-out 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.cv-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(255, 98, 0, 0.5);
+  background: linear-gradient(90deg, #ff8c00, #ff6200);
+}
+
+.cv-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation keyframes */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .Hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .profilePic {
+    margin-right: 0;
+    margin-bottom: 3rem;
+    width: 240px;
+    height: 240px;
+  }
+
+  .intro {
+    font-size: 3rem;
+  }
+
+  .text-blue-500 {
+    font-size: 3.8rem;
+  }
+
+  .aboutMe-p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cv-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Hero {
+    padding: 1.5rem;
+  }
+
+  .profilePic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .intro {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  .text-blue-500 {
+    font-size: 2.8rem;
+  }
+
+  .aboutMe-p {
+    font-size: 1.1rem;
+  }
+
+  .social-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cv-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
+}

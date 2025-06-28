@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a0a0a9a;
+  padding: 1.5rem 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ff6200;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navBar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar ul li {
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navBar ul li a {
+  color: #cccccc;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navBar ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff6200;
+  transition: width 0.3s ease-in-out;
+}
+
+.navBar ul li:hover {
+  color: #ff6200;
+}
+
+.navBar ul li:hover::after {
+  width: 100%;
+}
+
+.contact-button {
+  background: linear-gradient(90deg, #ff6200, #ff8c00);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 98, 阳);
+  background: linear-gradient(90deg, #ff8c00, #ff6200);
+}
+
+.contact-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9f1c, #ff5722, #ffc107, #bdbdbd);
+  transition: width 0.2s ease;
+  z-index: 11;
+}
+
+@media (max-width: 1000px) {
+  .navBar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .navBar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBar ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .navBar button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .navBar ul li {
+    font-size: 0.9rem;
+  }
+
+  .navBar button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ensure sections have offset for fixed navbar */
+#hero,
+#education,
+#projects,
+#email-form {
+  scroll-margin-top: 80px;
+}
