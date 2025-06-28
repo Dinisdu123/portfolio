@@ -26,7 +26,7 @@ function Hero() {
             className="social-button"
           >
             <img
-              src="/assets/linkedin.png"
+              src="public\assets\linkedin.png"
               alt="LinkedIn icon"
               className="social-icon"
             />
@@ -38,7 +38,7 @@ function Hero() {
             className="social-button"
           >
             <img
-              src="/assets/github-sign.png"
+              src="public\assets\github-sign.png"
               alt="GitHub icon"
               className="social-icon"
             />
@@ -55,7 +55,7 @@ function Hero() {
               className="social-icon"
             />
           </a>
-          <a href="/assets/cv.jpg" download className="cv-button">
+          <a href="public\assets\cv.jpg" download className="cv-button">
             Download CV
           </a>
         </div>

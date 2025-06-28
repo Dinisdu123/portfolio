@@ -7,7 +7,7 @@ function Projects() {
       <div className="project-grid">
         <div className="project-card">
           <img
-            src="/assets/tlmsss.png"
+            src="public/assets/tlmsss.png"
             alt="Teachers' Leave Management System"
             className="project-image"
           />
@@ -39,7 +39,7 @@ function Projects() {
         </div>
         <div className="project-card">
           <img
-            src="/assets/ecomss.png"
+            src="public/assets/ecomss.png"
             alt="Project 2"
             className="project-image"
           />
@@ -73,7 +73,7 @@ function Projects() {
         </div>
         <div className="project-card">
           <img
-            src="/assets/lmsss.png"
+            src="public/assets/lmsss.png"
             alt="Project 3"
             className="project-image"
           />
@@ -105,7 +105,7 @@ function Projects() {
         </div>
         <div className="project-card">
           <img
-            src="/assets/supermarketss.png"
+            src="public/assets/supermarketss.png"
             alt="Project 4"
             className="project-image"
           />
@@ -130,7 +130,7 @@ function Projects() {
         </div>
         <div className="project-card">
           <img
-            src="/assets/wildlifess.png"
+            src="public/assets/wildlifess.png"
             alt="Project 5"
             className="project-image"
           />

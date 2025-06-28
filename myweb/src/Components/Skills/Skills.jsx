@@ -7,16 +7,16 @@ function Skills() {
       <h2 className="skills-h2">Front end tools</h2>
       <div className="front">
         <div className="skill-item">
-          <img src="/assets/html.png" alt="HTML Logo" width="80" />
+          <img src="public/assets/html.png" alt="HTML Logo" width="80" />
         </div>
         <div className="skill-item">
-          <img src="/assets/css-3.png" alt="CSS Logo" width="80" />
+          <img src="public/assets/css-3.png" alt="CSS Logo" width="80" />
         </div>
         <div className="skill-item">
-          <img src="/assets/js.png" alt="JavaScript Logo" width="80" />
+          <img src="public/assets/js.png" alt="JavaScript Logo" width="80" />
         </div>
         <div className="skill-item">
-          <img src="/assets/science.png" alt="React Logo" width="80" />
+          <img src="public/assets/science.png" alt="React Logo" width="80" />
         </div>
         <div className="skill-item">
           <img
@@ -26,16 +26,16 @@ function Skills() {
           />
         </div>
         <div className="skill-item">
-          <img src="/assets/figma.png" alt="Figma Logo" width="80" />
+          <img src="public/assets/figma.png" alt="Figma Logo" width="80" />
         </div>
       </div>
       <h2 className="skills-h2">Back end tools</h2>
       <div className="back">
         <div className="skill-item">
-          <img src="/assets/php.png" alt="PHP Logo" width="80" />
+          <img src="public/assets/php.png" alt="PHP Logo" width="80" />
         </div>
         <div className="skill-item">
-          <img src="/assets/python.png" alt="Python Logo" width="80" />
+          <img src="public/assets/python.png" alt="Python Logo" width="80" />
         </div>
         <div className="skill-item">
           <img
@@ -45,7 +45,7 @@ function Skills() {
           />
         </div>
         <div className="skill-item">
-          <img src="/assets/mysql.png" alt="MySQL Logo" width="80" />
+          <img src="public/assets/mysql.png" alt="MySQL Logo" width="80" />
         </div>
         <div className="skill-item">
           <img
@@ -58,10 +58,14 @@ function Skills() {
       <h2 className="skills-h2">Tools and platforms</h2>
       <div className="tools">
         <div className="skill-item">
-          <img src="/assets/social.png" alt="Git Logo" width="80" />
+          <img src="public/assets/social.png" alt="Git Logo" width="80" />
         </div>
         <div className="skill-item">
-          <img src="/assets/github-sign.png" alt="GitHub Logo" width="80" />
+          <img
+            src="public/assets/github-sign.png"
+            alt="GitHub Logo"
+            width="80"
+          />
         </div>
         <div className="skill-item">
           <img
